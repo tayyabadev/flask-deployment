@@ -6,12 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitProblemBtn = document.getElementById('submitProblem');
     const problemTypeSelect = document.getElementById('problemType');
     const problemInput = document.getElementById('problemInput');
-    const menuIcon = document.getElementById('menuIcon');
-    const navItems = document.getElementById('navItems');
-
-    menuIcon.addEventListener('click', function() {
-        navItems.classList.toggle('show');
-    });
 
     function toggleCalculator() {
         mathKeyboard.style.display = mathKeyboard.style.display === 'none' ? 'block' : 'none';
