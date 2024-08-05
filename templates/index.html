@@ -6,26 +6,28 @@
     <title>OneLiner - Explore</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul class="nav-links" style="display:flex; justify-content:space-between;">
-        <div class="logo">
-          <img src="../static/Assets/Screenshot_1.png" alt="logo"/>
-          <span class="name">OneLiner</span>
-        </div>
-        
-        <div class="flexing">
-          <li><a href="/">Home</a></li>
-          <li><a href="/index">Explore</a></li>
-          <li><a href="#">Bookmark</a></li>
-          <li><a href="#">Create</a></li>
-          <li class="profile-pic"><img src="../static/Assets/profile.png" alt="Profile" /></li>
-        </div>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav class="nav-links">
+          <div class="flexing">
+            <div class="logo">
+              <img src="../static/Assets/logo.png" alt="Logo">
+              <span class="name">OneLiner</span>
+            </div>
+            <div class="menu-icon" id="menuIcon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <ul class="nav-items" id="navItems">
+              <li><a href="/">Home</a></li>
+              <li><a href="/index">Explore</a></li>
+              <li><a href="#">Bookmark</a></li>
+              <li><a href="#">Create</a></li>
+              <li class="profile-pic"><img src="../static/Assets/profile.png" alt="Profile"></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
     <main role="main">
         <section class="hero">
@@ -75,7 +77,7 @@
                 </div>
                 <div class="rproblem">
                     <img src="../static/Assets/code.jpg" alt="Math Problem Image">
-                    <p>What is the integral of tan(x)</p>
+                    <p>What is the integral of sin(x)</p>
                 </div>
             </div>
         </section>
@@ -134,7 +136,6 @@
         </div>
         <button id="submitProblem" class="submit-button">Submit</button>
         </div>
-        <button id="submitProblem" >Submit</button>
     </div>
 
     <footer>
