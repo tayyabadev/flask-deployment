@@ -5,7 +5,6 @@ body {
     box-sizing: border-box;
     background-color: #ffffff;
 }
-
 header {
     background-color: #fff;
     padding: 10px 20px;
@@ -13,7 +12,6 @@ header {
 }
 
 .nav-links .flexing {
-    list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,17 +25,24 @@ header {
 }
 
 .nav-links .logo img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin-right: 10px;
 }
 
 .nav-links .logo .name {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
 }
 
-.nav-links li {
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items li {
     margin: 0 15px;
 }
 
@@ -46,6 +51,62 @@ header {
     color: #333;
     font-weight: bold;
 }
+
+.profile-pic img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .nav-links .flexing {
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-items.show {
+        display: flex;
+    }
+
+    .nav-items li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
 
 .profile-pic img {
     width: 30px;
@@ -76,6 +137,8 @@ header {
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
 }
 
 .hero-text h1 {
@@ -95,13 +158,13 @@ header {
 .input-container {
     position: relative;
     display: inline-block;
-    width: 300px;
-    max-width: 100%;
+    width: 90%;
+    max-width: 300px;
 }
 
 #problemInput {
     width: 95%;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -116,8 +179,8 @@ header {
 
 #problemType, #getHintBtn {
     display: block;
-    width: 300px;
-    max-width: 100%;
+    width: 90%;
+    max-width: 300px;
     padding: 10px;
     margin: 10px auto;
 }
@@ -139,11 +202,12 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
 }
 
 .problem, .rproblem {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
 }
 
@@ -172,6 +236,8 @@ footer {
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
 }
 
 .display {
@@ -197,8 +263,8 @@ footer {
 }
 
 .keyboard button {
-    padding: 15px;
-    font-size: 1.2rem;
+    padding: 10px;
+    font-size: 1rem;
     background-color: #d5dce1;
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -241,8 +307,50 @@ footer {
     background-color: #45a049;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .nav-links .flexing {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .keyboard {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .keyboard button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links .logo img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .nav-links .logo .name {
+        font-size: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.2rem;
+    }
+
     .keyboard {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .keyboard button {
+        padding: 6px;
+        font-size: 0.8rem;
     }
 }
