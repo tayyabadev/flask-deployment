@@ -71,7 +71,7 @@ header {
     transition: 0.4s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
     header {
         position: relative;
     }
