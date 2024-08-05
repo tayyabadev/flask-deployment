@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneLiner - Explore</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links" style="display:flex; justify-content:space-between;">
+        <div class="logo">
+          <img src="../static/Assets/Screenshot_1.png" alt="logo"/>
+          <span class="name">OneLiner</span>
+        </div>
+        
+        <div class="flexing">
+          <li><a href="/">Home</a></li>
+          <li><a href="/index">Explore</a></li>
+          <li><a href="#">Bookmark</a></li>
+          <li><a href="#">Create</a></li>
+          <li class="profile-pic"><img src="../static/Assets/profile.png" alt="Profile" /></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+    <main role="main">
+        <section class="hero">
+            <img src="../static/Assets/img.png" alt="Light Bulb Image">
+            <div class="hero-text">
+                <h1>Smart hints for Smart minds</h1>
+            </div>
+        </section>
+
+        <section class="problem-help">
+            <h2>Need help with a specific problem?</h2>
+            <div class="input-container">
+                <input type="text" id="problemInput" placeholder="Enter your problem here">
+                <i class="fas fa-calculator" id="calculatorIcon"></i>
+            </div>
+            <select id="problemType">
+                <option value="Math">Math</option>
+                <option value="Coding">Coding</option>
+            </select>
+            <button id="getHintBtn">Get Hint</button>
+        </section>
+
+        <section class="recently-accessed">
+            <h2>Recently accessed</h2>
+            <div class="recent-problems">
+                <div class="problem">
+                    <div class="smallimg">
+                        <img src="../static/Assets/Mathstry.png" alt="Math Problem Image">
+                    </div>
+                    <p>Simplify sin(x)cos(x)</p>
+                </div>
+                <div class="problem">
+                    <img src="../static/Assets/2mathstry.jpg" alt="Math Problem Image">
+                    <p>What is the integral of sin(x)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="Recommended">
+            <h2>Recommended for you</h2>
+            <div class="Recommended-prob">
+                <div class="rproblem">
+                    <div class="smallimg">
+                        <img src="../static/Assets/coding.jpg" alt="Math Problem Image">
+                    </div>
+                    <p>Simplify sin(x)cos(x)</p>
+                </div>
+                <div class="rproblem">
+                    <img src="../static/Assets/code.jpg" alt="Math Problem Image">
+                    <p>What is the integral of sin(x)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="mathKeyboard" class="math-keyboard" style="display: none;">
+        <button class="close-button" onclick="toggleCalculator()">×</button>
+        <div id="display" class="display">Enter a problem...</div>
+        <div class="keyboard">
+            <!-- Calculator buttons -->
+                  <!-- Row 1 -->
+        <button onclick="handleButtonClick('(')">(</button>
+        <button onclick="handleButtonClick(')')">)</button>
+        <button onclick="handleButtonClick('[')">[</button>
+        <button onclick="handleButtonClick(']')">]</button>
+        <button onclick="handleButtonClick('√')">√</button>
+        <button onclick="handleButtonClick('^')">^</button>
+        <button onclick="handleButtonClick('≥')">≥</button>
+        <button onclick="handleButtonClick('≤')">≤</button>
+        <button onclick="handleButtonClick('≠')">≠</button>
+        <button onclick="handleBackspace()">⌫</button>
+        <!-- Row 2 -->
+        <button onclick="handleButtonClick('sin(')">sin</button>
+        <button onclick="handleButtonClick('cos(')">cos</button>
+        <button onclick="handleButtonClick('tan(')">tan</button>
+        <button onclick="handleButtonClick('log(')">log</button>
+        <button onclick="handleButtonClick('7')">7</button>
+        <button onclick="handleButtonClick('8')">8</button>
+        <button onclick="handleButtonClick('9')">9</button>
+        <button onclick="handleButtonClick('x')">x</button>
+        <button onclick="handleButtonClick('π')">π</button>
+        <button onclick="handleClear()">C</button>
+        <button onclick="handleButtonClick('+')">+</button>
+        <button onclick="handleButtonClick('-')">-</button>
+        <button onclick="handleButtonClick('∩')">∩</button>
+        <!-- Row 3 -->
+        <button onclick="handleButtonClick('∪')">∪</button>
+        <button onclick="handleButtonClick('4')">4</button>
+        <button onclick="handleButtonClick('5')">5</button>
+        <button onclick="handleButtonClick('6')">6</button>
+        <button onclick="handleButtonClick('y')">y</button>
+        <button onclick="handleButtonClick('ln(')">ln</button>
+        <button onclick="handleButtonClick('/')">/</button>
+        <button onclick="handleButtonClick('')"></button>
+        <button onclick="handleButtonClick('e')">e</button>
+        <!-- Row 4 -->
+        <button onclick="handleButtonClick('0')">0</button>
+        <button onclick="handleButtonClick('1')">1</button>
+        <button onclick="handleButtonClick('2')">2</button>
+        <button onclick="handleButtonClick('3')">3</button>
+        <button onclick="handleButtonClick('z')">z</button>
+        <button onclick="handleButtonClick('%')">%</button>
+        <!-- Row 5 -->
+        <button onclick="handleButtonClick('=')">=</button>
+        <button onclick="handleButtonClick('.')">.</button>
+        </div>
+        <button id="submitProblem" class="submit-button">Submit</button>
+        </div>
+        <button id="submitProblem" >Submit</button>
+    </div>
+
+    <footer>
+        <p>© 2024 OneLiner. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/index.js"></script>
+</body>
+</html>

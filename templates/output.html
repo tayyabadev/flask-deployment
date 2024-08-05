@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneLiner - Output</title>
+    <link rel="stylesheet" href="../static/output.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Math</a> / <a href="#">Trigonometry</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="content">
+            <h1>Solve Your Problem</h1>
+            <div id="current-problem"></div>
+
+            <div class="answer-section">
+                <input type="text" class="answer-input" placeholder="Enter your problem">
+                <button class="submit-btn">Submit</button>
+            </div>
+
+            <div class="hint-section">
+                <h2>Hint</h2>
+                <div id="loader" class="loader" style="display: none;">
+                    <div class="loading-icon">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                </div>
+                <ul class="hint-list"></ul>
+            </div>
+
+            <button class="reset-btn">Reset</button>
+        </section>
+    </main>
+
+    <script src="../static/output.js"></script>
+</body>
+</html>
